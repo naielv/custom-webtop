@@ -10,6 +10,7 @@ sudo \
 unzip \
 wget \
 curl \
+cups \
 chromium \
 && apt clean && rm -rf /var/lib/apt/lists/*
 RUN wget https://download.nomachine.com/download/9.0/Raspberry/nomachine_9.0.188_11_arm64.deb -O nomachine.deb && dpkg -i nomachine.deb && rm nomachine.deb
