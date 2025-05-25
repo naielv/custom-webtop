@@ -9,6 +9,6 @@ CMD groupadd -r $USER -g 433 \
 && adduser $USER sudo \
 && mkdir /home/$USER \
 && chown -R $USER:$USER /home/$USER \
-&& echo $USER':'$PASSWORD | chpasswd
-/etc/NX/nxserver --startup
-tail -f /usr/NX/var/log/nxserver.log
+&& echo $USER':'$PASSWORD | chpasswd \
+&& /etc/NX/nxserver --startup \
+&& tail -f /usr/NX/var/log/nxserver.log
