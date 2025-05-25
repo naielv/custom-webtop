@@ -1,3 +1,3 @@
-FROM ghcr.io/linuxserver/rdesktop:latest
+FROM ghcr.io/linuxserver/rdesktop:debian-xfce
 
-RUN apk update && apk add libreoffice libreoffice-lang-es geany screen czkawka-gui mesa-gles thunderbird nano python3-tkinter	py3-gobject3 shotwell && rm /usr/lib/python3.*/EXTERNALLY-MANAGED -f && python3 -m ensurepip && pip3 install --no-cache --upgrade --break pip setuptools pywebview appjar
+RUN wget https://download.nomachine.com/download/9.0/Raspberry/nomachine_9.0.188_11_arm64.deb -O nomachine.deb && dpkg -i nomachine.deb && rm nomachine.deb
