@@ -5,4 +5,4 @@ RUN apt update && apt install -y wget \
     unzip && apt clean && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT []
-CMD /etc/NX/nxserver --startup
+CMD /etc/NX/nxserver --startup && tail -f /usr/NX/var/log/nxserver.log
