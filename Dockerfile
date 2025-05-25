@@ -2,15 +2,9 @@ FROM debian:bookworm
 
 RUN apt update && apt install -y \
 xfce4 \
-xfce4-artwork \
-xfce4-datetime-plugin \
-xfce4-places-plugin \
-thunar-media-tags-plugin \
-thunar-archive-plugin \
+thunar \
 mousepad \
 xfce4-notifyd \
-xfce4-taskmanager \
-xfce4-terminal \
 nano \
 sudo \
 unzip \
