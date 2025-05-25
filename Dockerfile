@@ -1,7 +1,23 @@
 FROM debian:bookworm
 
 RUN apt update && apt install -y \
-    xfce4 xfce4-goodies nano sudo unzip wget curl chromium && apt clean && rm -rf /var/lib/apt/lists/*
+xfce4 \
+xfce4-artwork \
+xfce4-datetime-plugin \
+xfce4-places-plugin \
+thunar-media-tags-plugin \
+thunar-archive-plugin \
+mousepad \
+xfce4-notifyd \
+xfce4-taskmanager \
+xfce4-terminal \
+nano \
+sudo \
+unzip \
+wget \
+curl \
+chromium \
+&& apt clean && rm -rf /var/lib/apt/lists/*
 RUN wget https://download.nomachine.com/download/9.0/Raspberry/nomachine_9.0.188_11_arm64.deb -O nomachine.deb && dpkg -i nomachine.deb && rm nomachine.deb
 
 CMD groupadd -r $USER -g 433 \
