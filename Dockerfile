@@ -16,7 +16,7 @@ chromium \
 python3-pip \
 python3-tk \
 && apt clean && rm -rf /var/lib/apt/lists/* \
-&& pip3 install \
+&& pip3 install --break \
 appjar \
 pywebview \
 qtpy \
