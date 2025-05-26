@@ -13,7 +13,14 @@ curl \
 cups \
 dbus-x11 \
 chromium \
-&& apt clean && rm -rf /var/lib/apt/lists/*
+python3-pip \
+python3-tk \
+&& apt clean && rm -rf /var/lib/apt/lists/* \
+&& pip3 install \
+appjar \
+pywebview \
+qtpy \
+pyside6
 RUN wget https://download.nomachine.com/download/9.0/Raspberry/nomachine_9.0.188_11_arm64.deb -O nomachine.deb && dpkg -i nomachine.deb && rm nomachine.deb
 
 CMD groupadd -r $USER -g 433 \
