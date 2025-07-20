@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/webtop:latest
+FROM ghcr.io/linuxserver/rdesktop:latest
 
 RUN apk add --no-cache \
     libreoffice \
@@ -13,6 +13,7 @@ RUN apk add --no-cache \
     nano \
     python3-tkinter \
     py3-gobject3 \
+    cifs-utils \
     shotwell \
     && rm /usr/lib/python3.*/EXTERNALLY-MANAGED -f && python3 -m ensurepip && pip3 install --no-cache --upgrade --break \
     pip \
