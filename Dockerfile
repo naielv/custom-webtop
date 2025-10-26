@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/rdesktop:latest
+FROM ghcr.io/linuxserver/webtop:latest
 
 RUN apk add --no-cache \
     libreoffice \
