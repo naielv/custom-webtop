@@ -15,12 +15,9 @@ RUN apk add --no-cache \
     py3-gobject3 \
     cifs-utils \
     shotwell \
-    qownnotes \
     gnucash \
-    code-oss \
     sqlitebrowser \
     ansible \
-    freshrss \
     kodi \
     && rm /usr/lib/python3.*/EXTERNALLY-MANAGED -f && python3 -m ensurepip && pip3 install --no-cache --upgrade --break \
     pip \
